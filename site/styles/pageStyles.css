@@ -1,4 +1,8 @@
 /**/
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 a.external {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVElEQVR42n3PgQkAIAhEUXdqJ3dqJ3e6IoTPUSQcgj4EQ5IlUiLE0Jil3PECXhcHGBhZ8kg4hwxAu3MZeCGeyFnAXp4hqNQPnt7QL0nADpD6wHccLvnAKksq8iiaAAAAAElFTkSuQmCC) center right no-repeat;
   padding-right: 13px;
@@ -129,7 +133,7 @@ header.vcard {
 
 .view-animate.ng-enter {
   /*left:100%;*/
-  top: -150px;
+  top: -450px;
 }
 
 .view-animate.ng-enter.ng-enter-active {
@@ -140,10 +144,10 @@ header.vcard {
 .view-animate.ng-leave.ng-leave-active {
   /*left:-100%;*/
   top: 50px;
-}        
+}
 
 abbr[title] {
-  border-bottom-color: inherit;    
+  border-bottom-color: inherit;
 }
 
 a abbr[title] {
@@ -152,38 +156,37 @@ cursor: auto;
 
 footer {
   border: 0;
-  position: fixed;
+  position: static !important;
   bottom: 0;
   font-size: small;
 }
 
 footer div{
   text-align: center;
-background: #adadad url(../images/bg-gray.png) repeat-x center;
+  background: #adadad url(http://1-ps.googleusercontent.com/h/www.rokni.com/images/xbg-gray.png.pagespeed.ic.Su6m5jK2Nd.png) repeat-x center;
   clear: both;
   list-style: none;
   border: 1px solid #f93;
-  margin: 0 auto;
+  margin: 0 auto 10px auto;
   padding: 0 20px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -moz-box-shadow: #003250 5px 5px 5px;
-  -webkit-box-shadow: #003250 5px 5px 5px;
-  box-shadow: #003250 5px 5px 5px;
+  -moz-box-shadow: #003250 2px 2px 2px;
+  -webkit-box-shadow: #003250 2px 2px 2px;
+  box-shadow: #003250 2px 2px 2px;
   color: #535353;
-  border-radius: 5px;
-  width: 80%;    
+  width: 80%;
 }
 
+
 input, label {
-  width: inherit; 
-  height: inherit; 
+  width: inherit;
+  height: inherit;
   font: inherit;
   float: none;
-  display: inline-flex;    
+  display: inline-flex;
 }
 
 input[type="text"], input[type="email"], textarea {
+  margin-left: 110px;
   width: 87% !important;
 }
 
@@ -200,7 +203,11 @@ input.clear {
 }
 
 header.vcard {
-    background: url(../images/sunflower.jpg) no-repeat center center;
+-webkit-animation-duration: 3s;
+-webkit-animation-name: slidein;
+animation-duration: 3s;
+animation-name: slidein;
+    background: url(../images/sunflower.png) no-repeat center center;
 }
 
 header.rwd {
@@ -212,11 +219,11 @@ header.rwd {
 }
 
 .vcard.performance {
-    background: url(../images/pier.jpg) no-repeat center center;
+    background: url(../images/pier.png) no-repeat center center;
 }
 
 .vcard.bookmark {
-    background: url(../images/bookstore.jpg) no-repeat center center;
+    background: url(../images/bookstore.png) no-repeat center center;
 }
 
 .vcard.contact {
@@ -226,6 +233,20 @@ header.rwd {
 header {
     padding: 25px 0;
 }
+
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 
 @media (min-width: 992px) {
     .col-md-5 {

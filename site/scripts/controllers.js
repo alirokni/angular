@@ -24,6 +24,11 @@ app.controller("bookmarksContoller", function($scope){
     title: "Bookmarks"
   }
 });
+app.controller("widgetsContoller", ['$scope', function($scope){
+  $scope.model = {
+    title: "Widgets, web applications"
+  }
+}]);
 app.controller("contactContoller", ['$scope',function($scope){
     $scope.model = {
         title: "Contact Me"
@@ -49,5 +54,22 @@ deliciousApp.controller('deliciousController', ['$scope', '$window', '$http', fu
     });
 	
 }]);
+
+// this controller uses service $http to retrive data using JSONP
+weatherApp.controller('weatherContoller', ['$scope', '$window', '$http', function ($scope, $window, $http) {
+    $scope.clickme = function() {
+        $http({method: 'jsonp', url: 'http://api.openweathermap.org/data/2.5/weather?q='+$scope.cityweather+'&APPID=4d3aaef3c8ef1cc9ffe7bf1c91665949&callback=JSON_CALLBACK'})
+        .success(function (data) {
+                $scope.weatherMap = data;
+                if(!data.message){
+                    $('#js-weather-report').removeClass('hidden');
+                }
+        })
+        .error(function (data) {
+                $scope.weatherMap = data;
+        });
+    }
+}]);
+
 
 

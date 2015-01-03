@@ -1,15 +1,9 @@
 <article class="contentTable" data-ng-controller="bookmarksContoller">
-    <header id="Delicious">
-        <a href="#" class="home">
-            Go Up
-        </a>
-        <h1 class="header2"> 
-         / {{model.title}}
-        </h1>
-    </header>     
     <section ng-app="deliciousApp" class="contenttxt container-fluid">
-            <div>My bookmarks are saved at <a href="https://delicious.com/rokni" class="external" external>delicious.com/rokni</a>:</div>
-            
+        <div>
+            <template-header></template-header>
+        </div>
+        <div>My bookmarks are saved at <a href="https://delicious.com/rokni" class="external" external>delicious.com/rokni</a>:</div>
         <div ng-controller="deliciousController as delicious">
             <div ng-repeat="bookmark in deliciousEntry">
                 <div ng-if="theStatus == 'error'">connection status: {{theStatus}}</div>

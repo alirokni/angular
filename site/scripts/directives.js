@@ -1,4 +1,17 @@
 // global functions
+app.directive('templateHeader', function () {
+    return {
+        restrict : 'E',
+        templateUrl: 'partials/template-header.html',
+    };
+});
+
+app.directive('templateFooter', function () {
+    return {
+        restrict : 'E',
+        templateUrl: 'partials/template-footer.html',
+    };
+});
 
 app.directive('external', function() {
     return {
@@ -22,7 +35,7 @@ app.directive('pageTitle', function() {
         }
     }
 });
- 
+
 app.directive('updateClickEvent', function () {
     return {
         link: function($scope, element, attrs) {
@@ -30,7 +43,7 @@ app.directive('updateClickEvent', function () {
                 $('#tabs-5').addClass('selected-tab');
                 var tab = element.attr('class'),
                     range = parseInt($("#range").val()),
-                    oVal = '', myTab = '';  
+                    oVal = '', myTab = '';
                     if( !element.text()){
                         var oVal = element.val();
                     }else{
@@ -56,7 +69,7 @@ deliciousApp.directive('deliciousTags', function () {
         templateUrl: 'partials/delicious-tags.html'
     };
 });
-/*
+
 weatherApp.directive('weatherMap', function () {
     return {
         restrict : 'E',
@@ -64,8 +77,8 @@ weatherApp.directive('weatherMap', function () {
         templateUrl: 'partials/weather.html'
     }
 });
-*/
-contactApp.directive('appClick', function(){
+
+contactApp.directive('contactMe', function(){
   return {
       restrict : 'EA',
       transclude: true,

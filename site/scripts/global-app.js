@@ -1,11 +1,11 @@
 // defining globalApp module which requires delicious-app.js and ngRoute to be present
-var app = angular.module('globalApp', ['deliciousApp', 'contactApp', 'ui.router', 'ngAnimate']);
+var app = angular.module('globalApp', ['deliciousApp', 'contactApp', 'ui.router', 'ngAnimate', 'weatherApp']);
 
     app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
-        
+
         // catch all route and send users to the intro page
         $urlRouterProvider.otherwise('/');
-    
+
         $stateProvider
             .state('introduction', {
                 url: '/',
@@ -42,6 +42,13 @@ var app = angular.module('globalApp', ['deliciousApp', 'contactApp', 'ui.router'
                 controller: 'contactContoller',
                 controllerAs: 'contact'
             })
+            .state('widgets', {
+                url: '/widgets',
+                templateUrl: './partials/widgets.html',
+                controller: 'widgetsContoller',
+                controllerAs: 'widgets'
+            })
+
     }]);
 
 // define deliciousApp module for bookmarks page
@@ -50,8 +57,5 @@ var deliciousApp = angular.module('deliciousApp', []);
 // define contactApp module for contact page
 var contactApp = angular.module('contactApp', []);
 
-// define contactApp module for performance page
-//var chartApp = angular.module('chartApp', ['googlechart']);
-//var chartApp = angular.module('google-chart-example', ['googlechart'])
-
-
+// define contactApp module for weahter app
+var weatherApp = angular.module('weatherApp', []);
