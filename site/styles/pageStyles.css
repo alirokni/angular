@@ -1,4 +1,9 @@
 /**/
+/* box model fix */
+*, *:before, *:after {		
+  box-sizing: border-box;		
+}
+
 a.external {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVElEQVR42n3PgQkAIAhEUXdqJ3dqJ3e6IoTPUSQcgj4EQ5IlUiLE0Jil3PECXhcHGBhZ8kg4hwxAu3MZeCGeyFnAXp4hqNQPnt7QL0nADpD6wHccLvnAKksq8iiaAAAAAElFTkSuQmCC) center right no-repeat;
   padding-right: 13px;
