@@ -17,29 +17,30 @@
     <header class="vcard">
         <h1 class="header fn">Ali Mehran Rokni</h1>
         <h2 class="tagline">The experimental site, information about my interests;<br/>design and development since 1999 <a href="#tocontent" accesskey="0" class="skip-nav">Skip navigation</a></h2>
-    </header>
-    <div class="mainContent">
         <nav>
             <ul id="nav">
                 <li class="listItem"><a href="#/introduction" class="navigation" data-page-title data-nav="intro">Home</a></li>
                 <li class="listItem"><a href="#/updates" class="navigation" data-page-title data-nav="update">Updates</a></li>
-                <li class="listItem"><a href="#/webPerformance" class="navigation" data-page-title data-nav="performance">Web Performance</a></li>
-                <li class="listItem"><a href="#/ResponsiveWebDesign" class="navigation" data-page-title data-nav="rwd"><abbr title="Responsive web design">RWD</abbr></a></li>
+                <li class="listItem"><a href="#/performance" class="navigation" data-page-title data-nav="performance">Web Performance</a></li>
+                <li class="listItem"><a href="#/RWD" class="navigation" data-page-title data-nav="rwd"><abbr title="Responsive web design">RWD</abbr></a></li>
                 <li class="listItem"><a href="#/bookmarks" class="navigation" data-page-title data-nav="bookmark">Bookmarks</a></li>
-                <li class="listItem"><a href="#/widgets" class="navigation" data-page-title data-nav="contact">Widgets</a></li>
+                <li class="listItem"><a href="#/widgets" class="navigation" data-page-title data-nav="widgets">Widgets</a></li>
             </ul>
         </nav>
-        <div data-ui-view></div>
-    </div>
+    </header>
     <div class="mainContent">
-        <h1>Contact Me</h1>
-        <div contact-me></div>
-    </div>
+        <article class="contentTable">
+            <div data-ui-view></div>
 
+            <header class="form-header">
+                <h1>Contact Me</h1>
+            </header>
+            <div contact-me></div>
+        </article>
+    </div>
     <div>
         <template-footer></template-footer>
     </div>
-
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.js"></script>

@@ -1,7 +1,7 @@
 /**/
 /* box model fix */
-*, *:before, *:after {		
-  box-sizing: border-box;		
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 a.external {
@@ -87,8 +87,9 @@ ul.input-range {
 }
 
 header.vcard {
-  width: 80%;
   margin: 0 auto;
+  padding: 25px 0;
+  width: 80%;
 }
 
 .hide {
@@ -145,10 +146,10 @@ header.vcard {
 .view-animate.ng-leave.ng-leave-active {
   /*left:-100%;*/
   top: 50px;
-}        
+}
 
 abbr[title] {
-  border-bottom-color: inherit;    
+  border-bottom-color: inherit;
 }
 
 a abbr[title] {
@@ -174,15 +175,15 @@ footer div{
   -webkit-box-shadow: #003250 2px 2px 2px;
   box-shadow: #003250 2px 2px 2px;
   color: #535353;
-  width: 80%;    
+  width: 80%;
 }
 
 input, label {
-  width: inherit; 
-  height: inherit; 
+  width: inherit;
+  height: inherit;
   font: inherit;
   float: none;
-  display: inline-flex;    
+  display: inline-flex;
 }
 
 input[type="text"], input[type="email"], textarea {
@@ -198,19 +199,19 @@ input.clear {
 }
 
 .changed{
-   background-color: #f93;
+   background-color: #eee;
 }
 
-header.vcard {
-    background: url(../images/sunflower.jpg) no-repeat center center;
+.vcard.intro {
+    background: url(../images/buddha.JPG) no-repeat center center;
 }
 
-header.rwd {
+.vcard.rwd {
     background: url(../images/ggb.jpg) no-repeat center center;
 }
 
 .vcard.update {
-    background: url(../images/buddha.JPG) no-repeat center center;
+    background: url(../images/sunflower.jpg) no-repeat center center;
 }
 
 .vcard.performance {
@@ -221,12 +222,18 @@ header.rwd {
     background: url(../images/bookstore.jpg) no-repeat center center;
 }
 
-.vcard.contact {
+.vcard.widgets {
     background: url(../images/carmel.jpg) no-repeat center center;
 }
 
-header {
-    padding: 25px 0;
+.form-header{
+    margin-left: 85px;
+}
+
+.btn-page-clear{
+    float: right;
+    margin-top: 3px;
+    margin-right: 90px;
 }
 
 @media (min-width: 992px) {
@@ -236,6 +243,21 @@ header {
 }
 
 @media screen and (max-width: 480px){
+ .mainContent {
+   padding-top: 5px;
+   width: 100%;
+  }
+  .contenttxt {
+    padding: 2% 5%;
+    margin: 0;
+  }
+  .vcard.intro, .vcard.rwd, .vcard.update,
+  .vcard.performance, .vcard.bookmark, .vcard.widgets  {
+    background: none;
+  }
+  .tagline {
+    display: none;
+  }
   .footer {
     position: static;
     font-size: x-small;

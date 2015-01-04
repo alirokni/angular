@@ -22,7 +22,7 @@ var app = angular.module('globalApp', ['deliciousApp', 'contactApp', 'ui.router'
                 url: '/performance',
                 templateUrl: './partials/webPerformance.html',
                 controller: 'webPerformanceContoller',
-                controllerAs: 'webPerformance'
+                controllerAs: 'performance'
             })
             .state('RWD', {
                 url: '/RWD',
@@ -30,8 +30,8 @@ var app = angular.module('globalApp', ['deliciousApp', 'contactApp', 'ui.router'
                 controller: 'RWDContoller',
                 controllerAs: 'RWD'
             })
-            .state('bookmark', {
-                url: '/bookmark',
+            .state('bookmarks', {
+                url: '/bookmarks',
                 templateUrl: './partials/bookmarks.html',
                 controller: 'bookmarksContoller',
                 controllerAs: 'bookmarks'
