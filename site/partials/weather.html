@@ -1,6 +1,6 @@
 <div ng-app="weatherApp" ng-controller="weatherContoller as weather">
     {{ weatherMap.message }}
-    <input type="text" ng-model="cityweather" placeholder="City or Zip-code" style="margin-left:0;" />
+    <input type="text" class="form-control" ng-model="cityweather" placeholder="City or Zip-code" style="margin-left:0; display:inline" />
     <button class="btn btn-primary" ng-click="clickme()">Go</button>
     <div id="js-weather-report" class="hidden">
         {{weatherMap.weather[0].main}} in {{ weatherMap.name }},  {{ weatherMap.sys.country  }}
