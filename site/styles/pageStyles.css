@@ -236,6 +236,10 @@ input.clear {
     margin-right: 90px;
 }
 
+.container-fluid-page {
+    padding-left: 0;
+}
+
 @media (min-width: 992px) {
     .col-md-5 {
         border-left: 1px dashed #f93;
