@@ -230,14 +230,31 @@ input.clear {
     margin-left: 85px;
 }
 
-.btn-page-clear{
-    float: right;
-    margin-top: 3px;
-    margin-right: 90px;
-}
-
 .container-fluid-page {
     padding-left: 0;
+}
+
+.email-response {
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    color: #555;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin-top: 2px;
+}
+
+.warning {
+    background-color: #fcf8e3;
+}
+
+.danger {
+    background-color: #f2dede;
+}
+
+.success {
+    background-color: #dff0d8;
 }
 
 @media (min-width: 992px) {

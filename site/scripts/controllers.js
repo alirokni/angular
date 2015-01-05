@@ -29,15 +29,43 @@ app.controller("widgetsContoller", ['$scope', function($scope){
     title: "Widgets, web applications"
   }
 }]);
+
 app.controller("contactContoller", ['$scope',function($scope){
-    $scope.model = {
-        title: "Contact Me"
-    };
-    $scope.saveFrom = function(){
+    $scope.sendForm = function(){
         var name = this.name;
         var email = this.email;
         var message = this.message;
-        alert(name + ", "+ email + ", " + message);
+        $.ajax({
+            type: "POST",
+            url: "contactform.php",
+            data: ({
+                "name":name,
+                "email":email,
+                "message":message
+            }),
+            success: function(msg,textStatus,xhr){
+                $('#js-email-response').removeClass('warning danger success');
+                if(msg == "-1"){
+                    $('#js-email-response').text("Valid Email required").addClass('email-response warning');
+                    $('input[type="email"]').focus().select();
+                }else if(msg == "1"){
+                    $('#js-email-response').text("Delivered successfully").addClass('email-response success');
+                    $('textarea[name = "message"]').val('');
+                }else{
+                    $('#js-email-response').text("There is an issue!!!").addClass('email-response danger');
+                }
+            },
+            error: function(msg,textStatus,xhr){
+                $('#js-email-response').removeClass('warning danger success')
+                $('#js-email-response').text("There is an issue!!!").addClass('email-response danger');
+            }
+        }); /* closing ajax call */
+    };
+    $scope.clearForm = function(){
+        $('input[name = "name"]').val('');$
+        $('input[name = "email"]').val('');
+        $('textarea[name = "message"]').val('');
+        $('#js-email-response').text('').removeClass('email-response warning danger success');
     }
 }]);
 
@@ -52,7 +80,7 @@ deliciousApp.controller('deliciousController', ['$scope', '$window', '$http', fu
         error(function (data) {
             $scope.theStatus = 'error';
     });
-	
+
 }]);
 
 // this controller uses service $http to retrive data using JSONP

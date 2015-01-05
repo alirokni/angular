@@ -81,7 +81,7 @@ weatherApp.directive('weatherMap', function () {
 contactApp.directive('contactMe', function(){
   return {
       restrict : 'EA',
-      transclude: true,
+      transclude: false,
       templateUrl: 'partials/contact-form.html'
     }
 });

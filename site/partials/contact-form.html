@@ -1,26 +1,32 @@
 <form name="oForm" class="form-group contenttxt" novalidate role="form" ng-controller="contactContoller">
     <fieldset id="ContactForm" class="ContactForm-list">
-    <legend ng-transclude>Contact Form</legend>
+    <legend>Contact Form</legend>
     <div class="ContactForm-list">
 
         <div class="form-group" ng-model="name">
             <label for="name">{{name || 'Name'}}</label>
-            <span class="label label-danger" ng-show="oForm.$submitted || oForm.name.$error.required">Required!</span>
-            <input type="text" name="name" ng-model="name" ng-class="{changed: oForm.name.$pristine}" class="form-control" required pattern="^[-\w]+$" />
+            <span class="label label-danger" ng-show="oForm.name.$error.required">Required!</span>
+            <input type="text" name="name" ng-model="name" class="form-control" required />
         </div>
 
         <div class="form-group" ng-model="email">
             <label for="email">{{email || 'E-mail'}}</label>
-            <span class="label label-danger" ng-show="oForm.$submitted || oForm.email.$error.required">Required!</span>
-            <input type="email" name="email" minlength="5" maxlength="100" ng-model="email" class="form-control" ng-class="{changed: oForm.email.$pristine}" required placeholder="example@address.com" pattern="^\S+@\S+[\.][0-9a-z]+$" />
+            <span class="label label-danger" ng-show="oForm.email.$error.required">Required!</span>
+            <span class="label label-danger" ng-show="oForm.email.$error.email">Invalid Email!</span>
+            <input type="email" name="email" ng-model="email" class="form-control" required placeholder="example@address.com" />
         </div>
         <div class="form-group">
             <label for="message">Your Message:</label>
             <textarea name="message" rows="5" ng-model="message" class="form-control" required placeholder="Your Message" ></textarea>
         </div>
-        <div class="form-group">
-            <button class="btn btn-primary" ng-click="saveFrom()">Submit</button>
-            <button ng-click="oForm.name.$rollbackViewValue(); name='';oForm.email.$rollbackViewValue(); email='';oForm.message.$rollbackViewValue(); message=''" class="btn btn-default clear btn-page-clear">Clear</button>
+        <div class="form-group clearfix">
+            <span class="action-submit-btn col-sm-2">
+                <button class="btn btn-primary" ng-click="sendForm()" ng-disabled="oForm.$invalid">Submit</button>
+            </span>
+            <span id="js-email-response" class="col-sm-7"></span>
+            <span class="action-clear-btn col-sm-3">
+                <button ng-click="oForm.name.$rollbackViewValue(); name='';oForm.email.$rollbackViewValue(); email='';oForm.message.$rollbackViewValue(); message=''; clearForm()" class="btn btn-default">Clear</button>
+            </span>
         </div>
 
     </div>
