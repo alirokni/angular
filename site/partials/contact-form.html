@@ -3,21 +3,21 @@
     <legend>Contact Form</legend>
     <div class="ContactForm-list">
 
-        <div class="form-group" ng-model="name">
-            <label for="name">{{name || 'Name'}}</label>
+        <div class="form-group">
+            <label for="name">{{model.name || 'Name'}}</label>
             <span class="label label-danger" ng-show="oForm.name.$error.required">Required!</span>
-            <input type="text" name="name" ng-model="name" class="form-control" required />
+            <input type="text" name="name" ng-model="model.name" class="form-control" required />
         </div>
 
-        <div class="form-group" ng-model="email">
-            <label for="email">{{email || 'E-mail'}}</label>
+        <div class="form-group">
+            <label for="email">{{model.email || 'E-mail'}}</label>
             <span class="label label-danger" ng-show="oForm.email.$error.required">Required!</span>
             <span class="label label-danger" ng-show="oForm.email.$error.email">Invalid Email!</span>
-            <input type="email" name="email" ng-model="email" class="form-control" required placeholder="example@address.com" />
+            <input type="email" name="email" ng-model="model.email" class="form-control" required placeholder="example@address.com" />
         </div>
         <div class="form-group">
             <label for="message">Your Message:</label>
-            <textarea name="message" rows="5" ng-model="message" class="form-control" required placeholder="Your Message" ></textarea>
+            <textarea name="message" rows="5" ng-model="model.message" class="form-control" required placeholder="Your Message" ></textarea>
         </div>
         <div class="form-group clearfix">
             <span class="action-submit-btn col-sm-2">
