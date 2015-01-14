@@ -36,9 +36,9 @@ app.controller("contactContoller", ['$scope',function($scope){
             type: "POST",
             url: "contactform.php",
             data: ({
-                "name": $scope.name,
-                "email": $scope.email,
-                "message": $scope.message
+                "name": $scope.model.name,
+                "email": $scope.model.email,
+                "message": $scope.model.message
             }),
             success: function(msg,textStatus,xhr){
                 $('#js-email-response').removeClass('warning danger success');
