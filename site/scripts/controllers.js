@@ -32,16 +32,13 @@ app.controller("widgetsContoller", ['$scope', function($scope){
 
 app.controller("contactContoller", ['$scope',function($scope){
     $scope.sendForm = function(){
-        var name = this.name;
-        var email = this.email;
-        var message = this.message;
         $.ajax({
             type: "POST",
             url: "contactform.php",
             data: ({
-                "name":name,
-                "email":email,
-                "message":message
+                "name": $scope.name,
+                "email": $scope.email,
+                "message": $scope.message
             }),
             success: function(msg,textStatus,xhr){
                 $('#js-email-response').removeClass('warning danger success');
