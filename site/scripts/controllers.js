@@ -30,33 +30,33 @@ app.controller("widgetsContoller", ['$scope', function($scope){
   }
 }]);
 
-app.controller("contactContoller", ['$scope',function($scope){
+app.controller("contactContoller", ['$scope', '$http', function ($scope, $http) {
     $scope.sendForm = function(){
-        $.ajax({
-            type: "POST",
-            url: "contactform.php",
-            data: ({
-                "name": $scope.model.name,
-                "email": $scope.model.email,
-                "message": $scope.model.message
+        $http({
+            method: 'post',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            data: $.param({
+                name: $scope.model.name,
+                email: $scope.model.email,
+                message: $scope.model.message
             }),
-            success: function(msg,textStatus,xhr){
+            url: 'contactform.php'})
+            .success(function(result){
                 $('#js-email-response').removeClass('warning danger success');
-                if(msg == "-1"){
+                if(result == "-1"){
                     $('#js-email-response').text("Valid Email required").addClass('email-response warning');
                     $('input[type="email"]').focus().select();
-                }else if(msg == "1"){
+                }else if(result == "1"){
                     $('#js-email-response').text("Delivered successfully").addClass('email-response success');
                     $('textarea[name = "message"]').val('');
                 }else{
                     $('#js-email-response').text("There is an issue!!!").addClass('email-response danger');
                 }
-            },
-            error: function(msg,textStatus,xhr){
+            })
+            .error(function(data, status, headers, config){
                 $('#js-email-response').removeClass('warning danger success')
                 $('#js-email-response').text("There is an issue!!!").addClass('email-response danger');
-            }
-        }); /* closing ajax call */
+        });
     };
     $scope.clearForm = function(){
         $('input[name = "name"]').val('');$
