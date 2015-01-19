@@ -1,5 +1,5 @@
 // defining globalApp module which requires delicious-app.js and ngRoute to be present
-var app = angular.module('globalApp', ['deliciousApp', 'contactApp', 'ui.router', 'ngAnimate', 'weatherApp']);
+var app = angular.module('globalApp', ['deliciousApp', 'contactApp', 'ui.router', 'weatherApp']);
 
     app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
 
@@ -10,46 +10,54 @@ var app = angular.module('globalApp', ['deliciousApp', 'contactApp', 'ui.router'
             .state('introduction', {
                 url: '/',
                 templateUrl: './partials/introduction.html',
-                controller: 'introductionContoller'
+                controller: 'IntroductionContoller'
             })
             .state('updates', {
                 url: '/updates',
                 templateUrl: './partials/updates.html',
-                controller: 'updatesContoller',
+                controller: 'UpdatesContoller',
                 controllerAs: 'updates'
             })
-            .state('performance', {
-                url: '/performance',
-                templateUrl: './partials/webPerformance.html',
-                controller: 'webPerformanceContoller',
-                controllerAs: 'performance'
-            })
-            .state('RWD', {
-                url: '/RWD',
-                templateUrl: './partials/ResponsiveWebDesign.html',
-                controller: 'RWDContoller',
-                controllerAs: 'RWD'
+            .state('features', {
+                url: '/features',
+                templateUrl: './partials/features.html',
+                controller: 'FeaturesContoller',
+                controllerAs: 'features'
             })
             .state('bookmarks', {
                 url: '/bookmarks',
                 templateUrl: './partials/bookmarks.html',
-                controller: 'bookmarksContoller',
+                controller: 'BookmarksContoller',
                 controllerAs: 'bookmarks'
             })
             .state('contact', {
                 url: '/contact',
                 templateUrl: './partials/contact.html',
-                controller: 'contactContoller',
+                controller: 'ContactContoller',
                 controllerAs: 'contact'
             })
             .state('widgets', {
                 url: '/widgets',
                 templateUrl: './partials/widgets.html',
-                controller: 'widgetsContoller',
+                controller: 'WidgetsContoller',
                 controllerAs: 'widgets'
             })
+    }]).run(['$rootScope', '$http', '$browser', '$timeout', function ($scope, $http, $browser, $timeout) {
+        // onclick event handlers
+        $scope.showForm = function () {
+            if( $('.form-group').hasClass('ng-hide') == true ){
+                $('.form-group').removeClass('ng-hide');
+                $('.form-group').slideDown();
+            } else {
+                $('.form-group').slideToggle();
+            }
+        };
+        $scope.closeForm = function () {
+          $('.form-group').slideUp();
+        };
 
-    }]);
+  }]);
+
 
 // define deliciousApp module for bookmarks page
 var deliciousApp = angular.module('deliciousApp', []);
