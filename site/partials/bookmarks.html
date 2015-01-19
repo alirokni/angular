@@ -1,10 +1,10 @@
-<div data-ng-controller="bookmarksContoller">
+<div data-ng-controller="BookmarksContoller">
     <section ng-app="deliciousApp" class="container-fluid container-fluid-page">
         <div>
             <template-header></template-header>
         </div>
-        <div class="contenttxt">My bookmarks are saved at <a href="https://delicious.com/rokni" class="external" external>delicious.com/rokni</a>:</div>
-        <div class="contenttxt" ng-controller="deliciousController as delicious">
+        <div class="content-txt margin-top-2rem">My bookmarks are saved at <a href="https://delicious.com/rokni" class="external" external>delicious.com/rokni</a>:</div>
+        <div class="content-txt" ng-controller="DeliciousController as delicious">
             <div ng-repeat="bookmark in deliciousEntry">
                 <div ng-if="theStatus == 'error'">connection status: {{theStatus}}</div>
                 <div class="row" ng-if="theStatus == 'success'">
