@@ -20,7 +20,7 @@ app.directive('external', function() {
             elems.attr({
                 target: "_blank",
                 "class": "external"
-});
+            });
         }
     }
 });
@@ -50,8 +50,8 @@ app.directive('updateClickEvent', function () {
                         var myTab = (element.attr('class')).substring( (element.attr('class')).indexOf('tabs-') , 6);
                         var oVal = myTab.substring((myTab.length) - 1) - 1;
                     }
-                    window.location.href='#/updates#'+$('div.contenttxt').eq( oVal ).attr('id');
-                    $('div.contenttxt').eq( oVal ).addClass('selected-tab');
+                    window.location.href='#/updates#'+$('p.content-txt').eq( oVal ).attr('id');
+                    $('p.content-txt').eq( oVal ).addClass('selected-tab');
                     $("#range").val(oVal);
                     $('.input-range li').removeClass('light-color');
                     $('.input-range li').eq( oVal ).addClass('light-color');
@@ -61,6 +61,15 @@ app.directive('updateClickEvent', function () {
 });
 
 
+/* onclick event handlers
+        $scope.showForm = function () {
+          $('.contactRow').slideToggle();
+        };
+        $scope.closeForm = function () {
+          $('.contactRow').slideUp();
+        };
+
+*/
 // local functions
 
 deliciousApp.directive('deliciousTags', function () {
