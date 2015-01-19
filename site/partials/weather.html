@@ -1,13 +1,18 @@
-<div ng-app="weatherApp" ng-controller="weatherContoller as weather">
-    {{ weatherMap.message }}
-    <input type="text" class="form-control" ng-model="cityweather" placeholder="City or Zip-code" style="margin-left:0; display:inline" />
-    <button class="btn btn-primary" ng-click="clickme()">Go</button>
-    <div id="js-weather-report" class="hidden">
-        {{weatherMap.weather[0].main}} in {{ weatherMap.name }},  {{ weatherMap.sys.country  }}
-        <br/>
-        <img src="http://openweathermap.org/img/w/{{ weatherMap.weather[0].icon }}.png">  {{ (((weatherMap.main.temp - 273.15)*9/5)+32).toFixed(1) }} °F  {{ weatherMap.weather[0].description }}
-    </div>
-    <div>
-        This applications with added featuers has been detailed in <a href="https://github.com/alirokni/weather-geoLocation" external>github.com/alirokni/weather-geoLocation</a>
-    </div>
+<div ng-app="weatherApp" ng-controller="WeatherContoller as weather">
+    <ul class="no-list">
+        <li>
+            <h2>Weather Report</h2>
+            {{ weatherMap.message }}
+            <input type="text" class="form-control input-weather" ng-model="cityweather" placeholder="City or Zip-code" />
+            <button class="btn btn-primary" ng-click="clickme()">Go</button>
+            <p id="js-weather-report" class="hidden">
+                {{weatherMap.weather[0].main}} in {{ weatherMap.name }},  {{ weatherMap.sys.country  }}
+                <br/>
+                <img src="http://openweathermap.org/img/w/{{ weatherMap.weather[0].icon }}.png">  {{ (((weatherMap.main.temp - 273.15)*9/5)+32).toFixed(1) }} °F  {{ weatherMap.weather[0].description }}
+            </p>
+            <p>
+                This applications with added featuers (<a href="/widgets/weather-geoLocation/geo-location.html" external>weather-geoLocation</a>) has been detailed in <a href="https://github.com/alirokni/weather-geoLocation" external>github.com/alirokni/weather-geoLocation</a>
+            </p>
+        </li>
+    </ul>
 </div>
