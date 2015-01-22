@@ -477,7 +477,7 @@ input.clear {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     header.vcard {
         margin: 0;
         padding: 1.5rem 0;
@@ -490,8 +490,8 @@ input.clear {
         padding: 2% 5%;
         margin: 0;
     }
-    header.vcard, .vcard.intro, .vcard.rwd, .vcard.update,
-    .vcard.performance, .vcard.bookmark, .vcard.widgets {
+     header.vcard, .vcard.intro, .vcard.update, 
+    .vcard.features, .vcard.bookmark, .vcard.widgets {
         background: #455A64;
         width: 100%;
     }
@@ -539,3 +539,4 @@ input.clear {
     .action-clear-btn {
         float: initial;
     }
+}    
