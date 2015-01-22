@@ -217,9 +217,6 @@ form,.oForm ol {
     padding: 0;
 }
 
-/*
-*/
-
 /**/
 /* box model fix */
 *, *:before, *:after {
@@ -446,9 +443,9 @@ input.clear {
     padding: .5% 3%;
     position: absolute !important;
     z-index: 3;
-    width: 60%;
+    width: 80%;
     top: 1rem;
-    left: 20%;
+    left: 10%;
 }
 
 .action-clear-btn {
