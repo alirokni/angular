@@ -1,37 +1,22 @@
-<form name="oForm" class="form-group form-layer ng-hide" novalidate role="form" ng-controller="ContactContoller">
-    <a href="javascript:void(0)" ng-click="closeForm()" class="close-x"><i class="fa fa-times fa-3x"></i></a>
-    <fieldset id="ContactForm" class="ContactForm-list">
-    <legend>Contact Form</legend>
-    <div class="ContactForm-list">
+<section id="tocontent margin-top-2rem">
+    <p class="content-txt">
+        The <b>Rokni.net</b> is an 'experimental' site. I try new technologies here and then might move some of it to <a href="http://www.rokni.com" external>Rokni.com</a>.
+    </p>
+    <p class="content-txt">
+        Anything related to html, css, javascript, design patterns and frameworks that is interesting and needs to be tried out, will be tested here.
+    </p>
 
-        <div class="form-group">
-            <label for="name">Name: {{model.name}}</label>
-            <span class="label label-danger" ng-show="oForm.name.$error.required">Required!</span>
-            <input type="text" name="name" ng-model="model.name" class="form-control" required />
-        </div>
-
-        <div class="form-group" ng-model="email">
-            <label for="email">E-mail: {{model.email}}</label>
-            <span class="label label-danger" ng-show="oForm.email.$error.required">Required!</span>
-            <span class="label label-danger" ng-show="oForm.email.$error.email">Invalid Email!</span>
-            <input type="email" name="email" ng-model="model.email" class="form-control" required placeholder="example@address.com" />
-        </div>
-
-        <div class="form-group">
-            <label for="message">Your Message:</label>
-            <textarea name="message" rows="5" ng-model="model.message" class="form-control" required placeholder="Your Message" ></textarea>
-        </div>
-
-        <div class="form-group clearfix">
-            <span class="action-submit-btn col-sm-2">
-                <button class="btn btn-primary" ng-click="sendForm()" ng-disabled="oForm.$invalid">Submit</button>
-            </span>
-            <span id="js-email-response" class="col-sm-8"></span>
-            <span class="action-clear-btn col-sm-32">
-                <button ng-click="oForm.name.$rollbackViewValue(); name='';oForm.email.$rollbackViewValue(); email='';oForm.message.$rollbackViewValue(); message=''; clearForm()" class="btn btn-default">Clear</button>
-            </span>
-        </div>
-
-    </div>
-    </fieldset>
-  </form>
+    <p class="content-txt">
+        An interesting topic that I am following and exploring as is, <a href="#/features">Web Performance</a>. I am testing, analyzing and optimizing this site and the Rokni.com with Google
+        <a href="https://developers.google.com/speed/" external>PageSpeed Tools</a>, <a href="http://developer.yahoo.com/yslow/" external>YSlow</a> and some other interesting online tools to make
+        the site faster.
+    </p>
+    <p class="content-txt">
+        Currently, none of the scripts and stylesheets are compressed and or minified, eventually, those files should be minified and concatnated either using a task runner (similar
+        process to <a href="https://github.com/alirokni/node-mustache" external>my github node-mustache</a> project -<a href="http://www.rokni.net:8080/index.html" external>rokni.net:8080/index.html</a>-)
+        or <a href="https://developers.google.com/closure/compiler/" external>Closure Compiler</a> Service UI can be used.
+    </p>
+    <p class="content-txt">
+        As this site considered <b>Hard Hat Area</b>, best to view it with modern browsers. So, older browsers are not supported and might not rendered correctly.
+    </p>
+</section>
