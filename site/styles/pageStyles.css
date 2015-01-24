@@ -50,7 +50,7 @@ a:hover {
 }
 
 header.vcard {
-    background: url(../images/buddha.jpg) center center no-repeat;
+    background: url(../images/buddha.jpg) center 47% no-repeat;
     color: #fff;
     margin: 4.9rem auto 0 auto;
     padding: 10.5rem 0;
@@ -96,6 +96,12 @@ time {
     background-color: #eaeaea;
     border: .1rem solid #f93;
     opacity: .5;
+}
+
+.home-away:hover {
+    background-color: initial;
+    border: .1rem solid silver;
+    opacity: 1;
 }
 
 .header {
@@ -198,7 +204,7 @@ a.navigation:hover,.selected {
 
 #nav {
     opacity: 0.9;
-    padding: 1.5rem .2rem;
+    padding: 1.7rem 1rem 1.3rem 0;
     position: fixed;
     top: 0;
     text-align: right;
@@ -228,7 +234,6 @@ form,.oForm ol {
     margin: 0;
     padding: 0;
 }
-
 
 .row {
     padding: .5rem;
@@ -339,14 +344,40 @@ a abbr[title] {
     color: #FF5722;
 }
 
-.footer div {
+.footer{
     background: #455A64;
     margin: 0 auto 1.5rem auto;
-    box-shadow: #455A64 2px 2px 2px;
+    box-shadow: #455A64 .2rem .2rem .2rem;
     color: #FF5722;
     width: 80%;
-    padding: 1.0rem 5.0rem;
-    font-size: small;
+    font-size: 1.3rem;
+    padding: .5rem .7rem;
+}
+
+.footer-legal {
+    text-align: left;
+    width: 49%;
+    display: inline-block;
+}
+
+.footer-social {
+    width: 49%;
+    display: inline-block;
+}
+
+.footer-social-buttons{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-social-buttons li a:hover{
+    color: #fff;
+}
+
+.footer-social-buttons li{
+    display: inline;
+    padding: 0 .5rem;
 }
 
 input, label {
@@ -369,12 +400,8 @@ input.clear {
     background-color: #eee;
 }
 
-.vcard.intro {
-    background: url(../images/buddha.jpg) no-repeat center center;
-}
-
 .vcard.features {
-    background: url(../images/ggb.jpg) no-repeat center center;
+    background: url(../images/ggb.jpg) no-repeat center 5%;
 }
 
 .vcard.update {
@@ -386,7 +413,7 @@ input.clear {
 }
 
 .vcard.widgets {
-    background: url(../images/carmel.jpg) no-repeat center center;
+    background: url(../images/carmel.jpg) no-repeat center  65%;
 }
 
 .form-header {
@@ -427,7 +454,6 @@ input.clear {
 
 .attention{
     color: white !important;
-    font-weight: 800;
 }
 
 .form-layer {
@@ -462,7 +488,7 @@ input.clear {
 
 @media (min-width: 992px) {
     .col-md-5 {
-        border-left: 1px dashed #FF5722;
+        border-left: .1rem dashed #FF5722;
     }
 }
 
@@ -472,7 +498,7 @@ input.clear {
         padding: 1.5rem 0;
     }
     .mainContent {
-        padding-top: 5px;
+        padding-top: .5rem;
         width: 100%;
     }
     .content-txt {
@@ -491,7 +517,7 @@ input.clear {
         position: static;
     }
     .footer div {
-        font-size: 1rem;
+        font-size: 0.5rem;
         padding: .1rem;
     }
     .listItem {
@@ -506,7 +532,7 @@ input.clear {
         display: inline;
     }
     .contentTable {
-        padding: 5px;
+        padding: .5rem;
         box-shadow: initial;
     }
     a.navigation:link, a.navigation:visited, a.navigation:active {
@@ -527,5 +553,9 @@ input.clear {
     }
     .action-clear-btn {
         float: initial;
+    }
+    .footer-social-buttons li{
+        display: inline;
+        padding: .8rem;
     }
 }

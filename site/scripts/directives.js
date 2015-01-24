@@ -1,8 +1,16 @@
 // global functions
+
 app.directive('templateHeader', function () {
     return {
         restrict : 'E',
         templateUrl: 'partials/template-header.html',
+    };
+});
+
+app.directive('templateSubHeader', function () {
+    return {
+        restrict : 'E',
+        templateUrl: 'partials/template-sub-header.html',
     };
 });
 

@@ -15,23 +15,12 @@
     <link rel="stylesheet" href="./styles/pageStyles.css">
 </head>
 <body id="Home" data-ng-app="globalApp">
-    <header class="vcard">
-        <h1 class="header"><a href="#/introduction" data-page-title data-nav="intro"><i class="fa fa-home fa-fw"></i> Ali Mehran Rokni</a></h1>
-        <h2 class="tagline">The experimental site, information about my interests; design and development since 1999</h2>
-        <nav>
-            <ul id="nav">
-                <li class="listItem"><a href="#/updates" class="navigation" data-page-title data-nav="update">Updates</a></li>
-                <li class="listItem"><a href="#/features" class="navigation" data-page-title data-nav="features">Features</a></li>
-                <li class="listItem"><a href="#/bookmarks" class="navigation" data-page-title data-nav="bookmark">Bookmarks</a></li>
-                <li class="listItem"><a href="#/widgets" class="navigation" data-page-title data-nav="widgets">Widgets</a></li>
-                <li class="listItem"><a href="javascript:void(0)" class="navigation attention" ng-click="showForm()">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <template-header></template-header>
+
     <div class="mainContent">
         <article class="contentTable">
             <div data-ui-view></div>
-
             <div data-contact-me></div>
         </article>
     </div>
