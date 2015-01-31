@@ -6,8 +6,8 @@
             <div ng-repeat="bookmark in deliciousEntry">
                 <div ng-if="theStatus == 'error'">connection status: {{theStatus}}</div>
                 <div class="row" ng-if="theStatus == 'success'">
-                    <span class="col-xs-12 col-md-7"><a ng-href="{{bookmark.u}}" class="external" external>{{bookmark.d}}</a></span>
-                    <span class="col-xs-12 col-md-5"><i class="fa fa-tags"></i> <delicious-tags bookmark="bookmark"></delicious-tags></span>
+                    <span class="col-xs-12 col-md-8"><a ng-href="{{bookmark.u}}" class="external" external>{{bookmark.d}}</a></span>
+                    <span class="col-xs-12 col-md-4"><i class="fa fa-tags"></i> <delicious-tags bookmark="bookmark"></delicious-tags></span>
                     <!--span class="col-md-3">saved on: {{bookmark.dt | date:"MM/dd/yyyy" }}</span-->
                 </div>
             </div>

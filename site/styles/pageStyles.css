@@ -3,8 +3,7 @@ html {
 }
 body {
     background: #fff;
-    font: normal 1.6rem Raleway, 'Palatino Linotype', sans-serif, monospace, Arial, Verdana, Helvetica;
-    /* = 16px */
+    font: normal 1.6rem 'Droid Sans Mono', 'Palatino Linotype', sans-serif, monospace, Arial, Verdana, Helvetica; /* = 16px */
     margin: 0;
     padding: 0;
     text-align: center;
@@ -15,7 +14,7 @@ body {
     box-sizing: border-box;
 }
 
-a.external {
+.external {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVElEQVR42n3PgQkAIAhEUXdqJ3dqJ3e6IoTPUSQcgj4EQ5IlUiLE0Jil3PECXhcHGBhZ8kg4hwxAu3MZeCGeyFnAXp4hqNQPnt7QL0nADpD6wHccLvnAKksq8iiaAAAAAElFTkSuQmCC) center right no-repeat;
     padding-right: 1.3rem;
 }
@@ -487,7 +486,7 @@ input.clear {
 */
 
 @media (min-width: 992px) {
-    .col-md-5 {
+    .col-md-4 {
         border-left: .1rem dashed #FF5722;
     }
 }
