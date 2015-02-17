@@ -379,6 +379,11 @@ a abbr[title] {
     padding: 0 .5rem;
 }
 
+.hide-text {
+    display: inline-block;
+    text-indent: -999rem;
+}
+
 input, label {
     width: inherit;
     height: inherit;
