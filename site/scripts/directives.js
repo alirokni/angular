@@ -38,7 +38,7 @@ app.directive('pageTitle', function() {
         link: function($scope, element, attrs) {
             element.on('click', function(e){
                 document.title= "Rokni.net > " + element.text();
-                $('header.vcard').attr('class', "vcard "+element.attr("data-nav"))
+                $('html').attr('class', "vcard "+element.attr("data-nav"))
             });
         }
     }
