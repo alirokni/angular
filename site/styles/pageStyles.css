@@ -139,6 +139,7 @@ time {
     width: 80%;
     line-height: 3rem;
     background: #fff;
+    opacity: 0.85;
 }
 
 .range {
@@ -384,11 +385,6 @@ a abbr[title] {
     padding: 0 .5rem;
 }
 
-.hide-text {
-    display: inline-block;
-    text-indent: -999rem;
-}
-
 input, label {
     width: inherit;
     height: inherit;
@@ -410,7 +406,7 @@ input.clear {
 }
 
 .vcard.features {
-    background: url(../images/goldenGateBridge.jpg) no-repeat 59% 93%;
+    background: url(../images/NASA_Ames_HangarOne.jpg) no-repeat 51% 100%;
 }
 
 .vcard.update {
@@ -422,7 +418,7 @@ input.clear {
 }
 
 .vcard.widgets {
-    background: url(../images/santaBarbara.jpg) no-repeat center 35%;
+    background: url(../images/santaCruz.jpg) no-repeat center 35%;
 }
 
 .form-header {
@@ -509,6 +505,7 @@ input.clear {
     .mainContent {
         padding-top: .5rem;
         width: 100%;
+        opacity: 1;
     }
     .content-txt {
         padding: 2% 5%;
