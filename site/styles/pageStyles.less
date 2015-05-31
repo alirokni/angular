@@ -1,17 +1,11 @@
-/*
-Variables
-*/
-
-@primary-color: #455A64;
-@accesnt-color: #FF5722;
-
 html {
     font-size: 62.5%;
+    background: url(../images/buddha.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 body {
-    background: #fff;
-    font: normal 1.6rem Raleway, 'Palatino Linotype', sans-serif, monospace, Arial, Verdana, Helvetica;
-    /* = 16px */
+    background: initial;
+    font: normal 1.6rem 'Droid Sans Mono', 'Palatino Linotype', sans-serif, monospace, Arial, Verdana, Helvetica; /* = 16px */
     margin: 0;
     padding: 0;
     text-align: center;
@@ -22,15 +16,15 @@ body {
     box-sizing: border-box;
 }
 
-a.external {
+.external {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVElEQVR42n3PgQkAIAhEUXdqJ3dqJ3e6IoTPUSQcgj4EQ5IlUiLE0Jil3PECXhcHGBhZ8kg4hwxAu3MZeCGeyFnAXp4hqNQPnt7QL0nADpD6wHccLvnAKksq8iiaAAAAAElFTkSuQmCC) center right no-repeat;
     padding-right: 1.3rem;
 }
 
 a.navigation:link, a.navigation:visited, a.navigation:active {
     padding: .5rem;
-    color: @accesnt-color;
-    text-shadow: 0 0 .01em @accesnt-color,0 0 .01em @accesnt-color,0 0 .01em @accesnt-color;
+    color: #FF5722;
+    text-shadow: 0 0 .01em #FF5722,0 0 .01em #FF5722,0 0 .01em #FF5722;
 }
 
 a.navigation:hover {
@@ -57,12 +51,14 @@ a:hover {
 }
 
 header.vcard {
-    background: url(../images/buddha.jpg) center center no-repeat;
+/* background: url(../images/buddha.jpg) center 47% no-repeat; */
     color: #fff;
-    margin: 4.9rem auto 0 auto;
+
+margin: 4.9rem auto 1rem auto;
     padding: 10.5rem 0;
     width: 80%;
     position: relative;
+box-shadow: #455A64 .3rem 1.2rem 2.5rem 0;
 }
 
 .content-txt {
@@ -71,7 +67,7 @@ header.vcard {
 
 .contentTable {
     padding: .5rem;
-    box-shadow: @primary-color .2rem .2rem .2rem
+    box-shadow: #455A64 .2rem .2rem .2rem
 }
 
 h1,h2,h3 {
@@ -85,7 +81,7 @@ img {
 }
 
 time {
-    color:@accesnt-color;
+    color:#FF5722;
 }
 
 .home {
@@ -94,7 +90,7 @@ time {
     font-size: 2.5rem;
     opacity: 0.8;
     text-decoration: none;
-    color: @primary-color;
+    color: #455A64;
     padding: 0 0 0 .5rem;
     margin-right: .5rem;
 }
@@ -105,6 +101,12 @@ time {
     opacity: .5;
 }
 
+.home-away:hover {
+    background-color: initial;
+    border: .1rem solid silver;
+    opacity: 1;
+}
+
 .header {
     font-size: 2rem;
     font-weight: 600;
@@ -112,7 +114,7 @@ time {
     top: 1.4rem;
     z-index: 3;
     padding-left: 1rem;
-    text-shadow: 0 0 .2em @accesnt-color,0 0 .2em @accesnt-color,0 0 .2em @accesnt-color;
+    text-shadow: 0 0 .2em #FF5722,0 0 .2em #FF5722,0 0 .2em #FF5722;
 }
 
 .header2 {
@@ -136,6 +138,8 @@ time {
     padding-top: 2.5rem;
     width: 80%;
     line-height: 3rem;
+    background: #fff;
+    opacity: 0.85;
 }
 
 .range {
@@ -161,7 +165,7 @@ time {
     padding-left: 1rem;
     position: absolute;
     bottom: 1.4rem;
-    text-shadow: 0 0 .2em @accesnt-color,0 0 .2em @accesnt-color,0 0 .2em @accesnt-color;
+    text-shadow: 0 0 .2em #FF5722,0 0 .2em #FF5722,0 0 .2em #FF5722;
 }
 
 .tabs-1 {
@@ -183,8 +187,8 @@ a.navigation:link,a.navigation:visited,a.navigation:active {
 a.navigation:hover,.selected {
     -moz-transition: all .35s linear;
     -webkit-transition: all .35s linear;
-    border-bottom: .3rem solid @accesnt-color;
-    color: @accesnt-color;
+    border-bottom: .3rem solid #FF5722;
+    color: #FF5722;
     transition: all .35s linear;
 }
 
@@ -205,12 +209,12 @@ a.navigation:hover,.selected {
 
 #nav {
     opacity: 0.9;
-    padding: 1.5rem .2rem;
+    padding: 1.7rem 1rem 1.3rem 0;
     position: fixed;
     top: 0;
     text-align: right;
     width: 80%;
-    background: @primary-color;
+    background: #455A64;
     z-index: 2;
 }
 
@@ -224,7 +228,7 @@ a.navigation:hover,.selected {
 
 .listItem {
     display: inline;
-    border-right: .3rem solid @accesnt-color;
+    border-right: .3rem solid #FF5722;
 }
 
 .listItem:last-child{
@@ -235,7 +239,6 @@ form,.oForm ol {
     margin: 0;
     padding: 0;
 }
-
 
 .row {
     padding: .5rem;
@@ -343,17 +346,43 @@ a abbr[title] {
 }
 
 .footer a, .footer a:hover {
-    color: @accesnt-color;
+    color: #FF5722;
 }
 
-.footer div {
-    background: @primary-color;
+.footer{
+    background: #455A64;
     margin: 0 auto 1.5rem auto;
-    box-shadow: @primary-color 2px 2px 2px;
-    color: @accesnt-color;
+    box-shadow: #455A64 .2rem .2rem .2rem;
+    color: #FF5722;
     width: 80%;
-    padding: 1.0rem 5.0rem;
-    font-size: small;
+    font-size: 1.3rem;
+    padding: .5rem .7rem;
+}
+
+.footer-legal {
+    text-align: left;
+    width: 49%;
+    display: inline-block;
+}
+
+.footer-social {
+    width: 49%;
+    display: inline-block;
+}
+
+.footer-social-buttons{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-social-buttons li a:hover{
+    color: #fff;
+}
+
+.footer-social-buttons li{
+    display: inline;
+    padding: 0 .5rem;
 }
 
 input, label {
@@ -377,7 +406,7 @@ input.clear {
 }
 
 .vcard.features {
-    background: url(../images/goldenGateBridge.jpg) no-repeat 59% 93%;
+    background: url(../images/NASA_Ames_HangarOne.jpg) no-repeat 51% 100%;
 }
 
 .vcard.update {
@@ -389,7 +418,7 @@ input.clear {
 }
 
 .vcard.widgets {
-    background: url(../images/santaBarbara.jpg) no-repeat center 35%;
+    background: url(../images/santaCruz.jpg) no-repeat center 35%;
 }
 
 .form-header {
@@ -425,12 +454,11 @@ input.clear {
 
 .close-x {
     float: right;
-    color: @primary-color;
+    color: #455A64;
 }
 
 .attention{
     color: white !important;
-    font-weight: 800;
 }
 
 .form-layer {
@@ -464,8 +492,8 @@ input.clear {
 */
 
 @media (min-width: 992px) {
-    .col-md-5 {
-        border-left: 1px dashed @accesnt-color;
+    .col-md-4 {
+        border-left: .1rem dashed #FF5722;
     }
 }
 
@@ -475,8 +503,9 @@ input.clear {
         padding: 1.5rem 0;
     }
     .mainContent {
-        padding-top: 5px;
+        padding-top: .5rem;
         width: 100%;
+        opacity: 1;
     }
     .content-txt {
         padding: 2% 5%;
@@ -484,7 +513,7 @@ input.clear {
     }
      header.vcard, .vcard.intro, .vcard.update,
     .vcard.features, .vcard.bookmark, .vcard.widgets {
-        background: @primary-color;
+        background: #455A64;
         width: 100%;
     }
     .tagline {
@@ -494,7 +523,7 @@ input.clear {
         position: static;
     }
     .footer div {
-        font-size: 1rem;
+        font-size: 0.5rem;
         padding: .1rem;
     }
     .listItem {
@@ -509,7 +538,7 @@ input.clear {
         display: inline;
     }
     .contentTable {
-        padding: 5px;
+        padding: .5rem;
         box-shadow: initial;
     }
     a.navigation:link, a.navigation:visited, a.navigation:active {
@@ -518,8 +547,8 @@ input.clear {
     a.navigation:hover,.selected {
         -moz-transition: initial;
         -webkit-transition: initial;
-        border-bottom: .3rem solid @accesnt-color;
-        color: @accesnt-color;
+        border-bottom: .3rem solid #FF5722;
+        color: #FF5722;
         transition: initial;
     }
     .close-x {
@@ -530,5 +559,9 @@ input.clear {
     }
     .action-clear-btn {
         float: initial;
+    }
+    .footer-social-buttons li{
+        display: inline;
+        padding: .8rem;
     }
 }
