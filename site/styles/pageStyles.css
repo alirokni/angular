@@ -410,7 +410,7 @@ input.clear {
 }
 
 .vcard.update {
-    background: url(../images/sunflower.jpg) no-repeat center center;
+    background: url(../images/sunflower.jpg) no-repeat center top;
 }
 
 .vcard.bookmark {
